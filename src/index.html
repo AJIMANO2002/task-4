@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Expense Calculator Task
+    </title>
+    <link rel="stylesheet" href="./output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="max-w-fit m-auto p-20">
+        <div class="bg-black text-white py-3">
+            Income Expense Calculator
+        </div>
+
+        <div class="mb-20" >
+            <div class="mt-10">Total Income: <span id="total-income">0</span></div>
+            <div>Total Expenses: <span id="total-expenses">0</span></div>
+            <div>Net Balance: <span id="net-balance">0</span></div>
+        </div>
+
+        <div class="flex flex-wrap mb-20">
+            <div class="m-5 p-10">
+                <input type="text" id="description" placeholder="Description">
+                <input type="number" id="amount" placeholder="Amount">
+            </div>
+
+            <select class="m-5 p-5" id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+          
+                <button class="p-5 cursor-pointer" id="add-btn">Add</button>
+                <button class="p-5 cursor-pointer" id="reset-btn">Reset</button>
+           
+        </div>
+
+        <div>
+            <label for=""><input type="radio" name="filter" value="all" checked>All</label>
+            <label for=""><input type="radio" name="filter" value="income" checked>Income</label>
+            <label for=""><input type="radio" name="filter" value="expense" checked>Expense</label>
+        </div>
+
+        <ul class="list-none p-0" id="entry-list"></ul>
+    </div>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
